@@ -13,8 +13,12 @@
 		0A3A64D91D76982800C22FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A64D71D76982800C22FD6 /* LaunchScreen.storyboard */; };
 		0A3A64E41D76982A00C22FD6 /* uSecureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A64E31D76982A00C22FD6 /* uSecureTests.swift */; };
 		0A3A64EF1D76982A00C22FD6 /* uSecureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A64EE1D76982A00C22FD6 /* uSecureUITests.swift */; };
-		0A3A64FD1D7698F400C22FD6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A64FC1D7698F400C22FD6 /* LoginController.swift */; };
 		0A3A64FF1D769A1100C22FD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A64FE1D769A1100C22FD6 /* GoogleService-Info.plist */; };
+		0A3A65011D769C5600C22FD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A65001D769C5600C22FD6 /* User.swift */; };
+		0A3A65041D769CF200C22FD6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A65031D769CF200C22FD6 /* Message.swift */; };
+		0A3A65061D769E8700C22FD6 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A65051D769E8700C22FD6 /* TJTextField.swift */; };
+		0A3A65081D76A3F300C22FD6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A65071D76A3F300C22FD6 /* Extensions.swift */; };
+		0AEE2AC61D7D4B9B005E48D8 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE2AC51D7D4B9B005E48D8 /* MessagesController.swift */; };
 		3DAE838B0378B56A5D541AA7 /* Pods_uSecureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B108E446B2507E978404394 /* Pods_uSecureTests.framework */; };
 		4DF323E50E8BF56649217446 /* Pods_uSecure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A73F1A1E8C453F81741FA9 /* Pods_uSecure.framework */; };
 		9EC97906FE19F0962713504E /* Pods_uSecureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39214AB0F1AA15F6C5E43743 /* Pods_uSecureUITests.framework */; };
@@ -50,8 +54,12 @@
 		0A3A64EA1D76982A00C22FD6 /* uSecureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uSecureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3A64EE1D76982A00C22FD6 /* uSecureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uSecureUITests.swift; sourceTree = "<group>"; };
 		0A3A64F01D76982A00C22FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A3A64FC1D7698F400C22FD6 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		0A3A64FE1D769A1100C22FD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0A3A65001D769C5600C22FD6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0A3A65031D769CF200C22FD6 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0A3A65051D769E8700C22FD6 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJTextField.swift; sourceTree = "<group>"; };
+		0A3A65071D76A3F300C22FD6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0AEE2AC51D7D4B9B005E48D8 /* MessagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		110CE6C815A8A7D4BD412885 /* Pods-uSecureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSecureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-uSecureUITests/Pods-uSecureUITests.release.xcconfig"; sourceTree = "<group>"; };
 		12690175F5C4453E11583EC9 /* Pods-uSecure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSecure.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uSecure/Pods-uSecure.debug.xcconfig"; sourceTree = "<group>"; };
 		382F97C9F8CCEBDD57820573 /* Pods-uSecure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSecure.release.xcconfig"; path = "Pods/Target Support Files/Pods-uSecure/Pods-uSecure.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,13 +124,16 @@
 		0A3A64CD1D76982800C22FD6 /* uSecure */ = {
 			isa = PBXGroup;
 			children = (
+				0A3A65021D769CDA00C22FD6 /* Models */,
 				0A3A64CE1D76982800C22FD6 /* AppDelegate.swift */,
 				0A3A64D21D76982800C22FD6 /* Main.storyboard */,
 				0A3A64D51D76982800C22FD6 /* Assets.xcassets */,
 				0A3A64FE1D769A1100C22FD6 /* GoogleService-Info.plist */,
 				0A3A64D71D76982800C22FD6 /* LaunchScreen.storyboard */,
 				0A3A64DA1D76982800C22FD6 /* Info.plist */,
-				0A3A64FC1D7698F400C22FD6 /* LoginController.swift */,
+				0A3A65051D769E8700C22FD6 /* TJTextField.swift */,
+				0A3A65071D76A3F300C22FD6 /* Extensions.swift */,
+				0AEE2AC51D7D4B9B005E48D8 /* MessagesController.swift */,
 			);
 			path = uSecure;
 			sourceTree = "<group>";
@@ -143,6 +154,15 @@
 				0A3A64F01D76982A00C22FD6 /* Info.plist */,
 			);
 			path = uSecureUITests;
+			sourceTree = "<group>";
+		};
+		0A3A65021D769CDA00C22FD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A3A65001D769C5600C22FD6 /* User.swift */,
+				0A3A65031D769CF200C22FD6 /* Message.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		6B0769F3EFBE1C0B557809F7 /* Frameworks */ = {
@@ -432,7 +452,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3A64CF1D76982800C22FD6 /* AppDelegate.swift in Sources */,
-				0A3A64FD1D7698F400C22FD6 /* LoginController.swift in Sources */,
+				0A3A65081D76A3F300C22FD6 /* Extensions.swift in Sources */,
+				0A3A65041D769CF200C22FD6 /* Message.swift in Sources */,
+				0A3A65061D769E8700C22FD6 /* TJTextField.swift in Sources */,
+				0A3A65011D769C5600C22FD6 /* User.swift in Sources */,
+				0AEE2AC61D7D4B9B005E48D8 /* MessagesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
