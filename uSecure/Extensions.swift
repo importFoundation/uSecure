@@ -26,6 +26,7 @@ extension UIView {
         for (index, view) in views.enumerate() {
             let key = "v\(index)"
             formatViews[key] = view
+            formatViews[key]?.translatesAutoresizingMaskIntoConstraints = false
         }
         
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(format, options: NSLayoutFormatOptions(), metrics: nil, views: formatViews))

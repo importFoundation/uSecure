@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1949FF1D95AF580002EA58 /* ChatMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1949FE1D95AF580002EA58 /* ChatMessageController.swift */; };
 		0A3A64CF1D76982800C22FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A64CE1D76982800C22FD6 /* AppDelegate.swift */; };
-		0A3A64D41D76982800C22FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A64D21D76982800C22FD6 /* Main.storyboard */; };
 		0A3A64D61D76982800C22FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A64D51D76982800C22FD6 /* Assets.xcassets */; };
 		0A3A64D91D76982800C22FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A64D71D76982800C22FD6 /* LaunchScreen.storyboard */; };
 		0A3A64E41D76982A00C22FD6 /* uSecureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A64E31D76982A00C22FD6 /* uSecureTests.swift */; };
@@ -16,9 +16,11 @@
 		0A3A64FF1D769A1100C22FD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A64FE1D769A1100C22FD6 /* GoogleService-Info.plist */; };
 		0A3A65011D769C5600C22FD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A65001D769C5600C22FD6 /* User.swift */; };
 		0A3A65041D769CF200C22FD6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A65031D769CF200C22FD6 /* Message.swift */; };
-		0A3A65061D769E8700C22FD6 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A65051D769E8700C22FD6 /* TJTextField.swift */; };
 		0A3A65081D76A3F300C22FD6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A65071D76A3F300C22FD6 /* Extensions.swift */; };
-		0AEE2AC61D7D4B9B005E48D8 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE2AC51D7D4B9B005E48D8 /* MessagesController.swift */; };
+		0A6B17291D9BBCFC00B8AB09 /* uSecureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A64E31D76982A00C22FD6 /* uSecureTests.swift */; };
+		0A6B172B1D9D088500B8AB09 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B172A1D9D088500B8AB09 /* TabbarController.swift */; };
+		0A6B172F1D9D0CD000B8AB09 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B172E1D9D0CD000B8AB09 /* AlarmController.swift */; };
+		0AEE2AC61D7D4B9B005E48D8 /* GroupMessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE2AC51D7D4B9B005E48D8 /* GroupMessagesController.swift */; };
 		3DAE838B0378B56A5D541AA7 /* Pods_uSecureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B108E446B2507E978404394 /* Pods_uSecureTests.framework */; };
 		4DF323E50E8BF56649217446 /* Pods_uSecure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A73F1A1E8C453F81741FA9 /* Pods_uSecure.framework */; };
 		9EC97906FE19F0962713504E /* Pods_uSecureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39214AB0F1AA15F6C5E43743 /* Pods_uSecureUITests.framework */; };
@@ -42,9 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1949FE1D95AF580002EA58 /* ChatMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageController.swift; sourceTree = "<group>"; };
 		0A3A64CB1D76982500C22FD6 /* uSecure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uSecure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3A64CE1D76982800C22FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A3A64D31D76982800C22FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A3A64D51D76982800C22FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A3A64D81D76982800C22FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A3A64DA1D76982800C22FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,9 +59,10 @@
 		0A3A64FE1D769A1100C22FD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A3A65001D769C5600C22FD6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0A3A65031D769CF200C22FD6 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		0A3A65051D769E8700C22FD6 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJTextField.swift; sourceTree = "<group>"; };
 		0A3A65071D76A3F300C22FD6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		0AEE2AC51D7D4B9B005E48D8 /* MessagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
+		0A6B172A1D9D088500B8AB09 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		0A6B172E1D9D0CD000B8AB09 /* AlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
+		0AEE2AC51D7D4B9B005E48D8 /* GroupMessagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupMessagesController.swift; sourceTree = "<group>"; };
 		110CE6C815A8A7D4BD412885 /* Pods-uSecureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSecureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-uSecureUITests/Pods-uSecureUITests.release.xcconfig"; sourceTree = "<group>"; };
 		12690175F5C4453E11583EC9 /* Pods-uSecure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSecure.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uSecure/Pods-uSecure.debug.xcconfig"; sourceTree = "<group>"; };
 		382F97C9F8CCEBDD57820573 /* Pods-uSecure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSecure.release.xcconfig"; path = "Pods/Target Support Files/Pods-uSecure/Pods-uSecure.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,14 +129,15 @@
 			children = (
 				0A3A65021D769CDA00C22FD6 /* Models */,
 				0A3A64CE1D76982800C22FD6 /* AppDelegate.swift */,
-				0A3A64D21D76982800C22FD6 /* Main.storyboard */,
 				0A3A64D51D76982800C22FD6 /* Assets.xcassets */,
 				0A3A64FE1D769A1100C22FD6 /* GoogleService-Info.plist */,
 				0A3A64D71D76982800C22FD6 /* LaunchScreen.storyboard */,
 				0A3A64DA1D76982800C22FD6 /* Info.plist */,
-				0A3A65051D769E8700C22FD6 /* TJTextField.swift */,
 				0A3A65071D76A3F300C22FD6 /* Extensions.swift */,
-				0AEE2AC51D7D4B9B005E48D8 /* MessagesController.swift */,
+				0AEE2AC51D7D4B9B005E48D8 /* GroupMessagesController.swift */,
+				0A1949FE1D95AF580002EA58 /* ChatMessageController.swift */,
+				0A6B172A1D9D088500B8AB09 /* TabbarController.swift */,
+				0A6B172E1D9D0CD000B8AB09 /* AlarmController.swift */,
 			);
 			path = uSecure;
 			sourceTree = "<group>";
@@ -259,18 +263,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Kevin Grozav";
 				TargetAttributes = {
 					0A3A64CA1D76982500C22FD6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = GGSXB9AK9F;
+						LastSwiftMigration = 0800;
 					};
 					0A3A64DE1D76982A00C22FD6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = GGSXB9AK9F;
+						LastSwiftMigration = 0800;
 						TestTargetID = 0A3A64CA1D76982500C22FD6;
 					};
 					0A3A64E91D76982A00C22FD6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = GGSXB9AK9F;
+						LastSwiftMigration = 0800;
 						TestTargetID = 0A3A64CA1D76982500C22FD6;
 					};
 				};
@@ -302,7 +312,6 @@
 			files = (
 				0A3A64D91D76982800C22FD6 /* LaunchScreen.storyboard in Resources */,
 				0A3A64D61D76982800C22FD6 /* Assets.xcassets in Resources */,
-				0A3A64D41D76982800C22FD6 /* Main.storyboard in Resources */,
 				0A3A64FF1D769A1100C22FD6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,11 +461,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3A64CF1D76982800C22FD6 /* AppDelegate.swift in Sources */,
+				0A6B172F1D9D0CD000B8AB09 /* AlarmController.swift in Sources */,
 				0A3A65081D76A3F300C22FD6 /* Extensions.swift in Sources */,
 				0A3A65041D769CF200C22FD6 /* Message.swift in Sources */,
-				0A3A65061D769E8700C22FD6 /* TJTextField.swift in Sources */,
 				0A3A65011D769C5600C22FD6 /* User.swift in Sources */,
-				0AEE2AC61D7D4B9B005E48D8 /* MessagesController.swift in Sources */,
+				0AEE2AC61D7D4B9B005E48D8 /* GroupMessagesController.swift in Sources */,
+				0A1949FF1D95AF580002EA58 /* ChatMessageController.swift in Sources */,
+				0A6B172B1D9D088500B8AB09 /* TabbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6B17291D9BBCFC00B8AB09 /* uSecureTests.swift in Sources */,
 				0A3A64EF1D76982A00C22FD6 /* uSecureUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,14 +504,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0A3A64D21D76982800C22FD6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A3A64D31D76982800C22FD6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0A3A64D71D76982800C22FD6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -532,6 +536,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GGSXB9AK9F;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -577,6 +582,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GGSXB9AK9F;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -599,10 +605,14 @@
 			baseConfigurationReference = 12690175F5C4453E11583EC9 /* Pods-uSecure.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GGSXB9AK9F;
 				INFOPLIST_FILE = uSecure/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kgrozav.uSecure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -611,10 +621,14 @@
 			baseConfigurationReference = 382F97C9F8CCEBDD57820573 /* Pods-uSecure.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GGSXB9AK9F;
 				INFOPLIST_FILE = uSecure/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kgrozav.uSecure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -627,6 +641,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kgrozav.uSecureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/uSecure.app/uSecure";
 			};
 			name = Debug;
@@ -640,6 +655,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kgrozav.uSecureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/uSecure.app/uSecure";
 			};
 			name = Release;
@@ -652,6 +668,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kgrozav.uSecureUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = uSecure;
 			};
 			name = Debug;
@@ -664,6 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kgrozav.uSecureUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = uSecure;
 			};
 			name = Release;

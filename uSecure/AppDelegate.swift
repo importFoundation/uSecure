@@ -12,9 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var currentUser : User? = nil 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        window?.rootViewController = TabbarController()
+        
         // Override point for customization after application launch.
         return true
     }

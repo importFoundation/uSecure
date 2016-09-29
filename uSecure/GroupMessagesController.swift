@@ -9,15 +9,16 @@
 import UIKit
 
 
-
-class MessagesController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class GroupMessagesController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let reuseIdentifier = "MessageCell"
     
     //  MARK: UIViewController overrides
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tabBarController?.tabBar.hidden = false
+        
         // Register cell classes
         self.collectionView!.registerClass(MessageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         self.collectionView?.alwaysBounceVertical = true
@@ -31,7 +32,8 @@ class MessagesController: UICollectionViewController, UICollectionViewDelegateFl
     }
 
     
-    // MARK: User Interface Implementation
+    // MARK: User Interface
+    
     private func layoutViews() {
         self.collectionView?.backgroundColor = UIColor.whiteColor()
         self.navigationItem.title = "Messages"
@@ -39,6 +41,7 @@ class MessagesController: UICollectionViewController, UICollectionViewDelegateFl
     
     
     // MARK: UICollectionViewDataSource
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return 3
@@ -53,8 +56,18 @@ class MessagesController: UICollectionViewController, UICollectionViewDelegateFl
         return cell
     }
     
+    // MARK: UICollectionViewDelegate
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let layout = UICollectionViewFlowLayout()
+        let controller = ChatMessageController(collectionViewLayout: layout)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
     
     //MARK:  UICollectionViewDelegateFlowLayout
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSize(width: self.view.frame.width, height: 80)
     }
@@ -66,15 +79,26 @@ class MessagesController: UICollectionViewController, UICollectionViewDelegateFl
 /* this cell displays the user's group and the most recent message in that group, along with its timestamp */
 class MessageCell : BaseCell {
     
-    /* computed initializers */
+    /* Setter observers */
+    override var highlighted: Bool {
+        didSet {
+            self.backgroundColor = highlighted ? UIColor.florianOrange : UIColor.whiteColor()
+            self.usernameLbl.textColor = highlighted ? UIColor.whiteColor() : UIColor.blackColor()
+            self.messageLbl.textColor = highlighted ? UIColor.whiteColor() : UIColor.lightGrayColor()
+            self.timeStamp.textColor = highlighted ? UIColor.whiteColor() : UIColor.blackColor()
+        }
+    }
     
+    
+    
+    
+    /* computed initializers */
     let userImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.contentMode = .ScaleToFill
         imageView.image = UIImage(named: "profilePic")
         imageView.layer.cornerRadius = 34
         imageView.layer.masksToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -82,22 +106,19 @@ class MessageCell : BaseCell {
     let seperatorView : UIView = {
         let seperator = UIView()
         seperator.backgroundColor = UIColor.lightGrayColor()
-        seperator.translatesAutoresizingMaskIntoConstraints = false
         return seperator
     }()
     
     let usernameLbl : UILabel = {
         let username = UILabel()
         username.text = "Group Name"
-        username.translatesAutoresizingMaskIntoConstraints = false
         return username
     }()
     
     
     let messageLbl : UILabel = {
         let message = UILabel()
-        message.text = "This is a really looooong message"
-        message.translatesAutoresizingMaskIntoConstraints = false
+        message.text = "Messages for this group"
         message.textColor = UIColor.darkGrayColor()
         message.font = UIFont.systemFontOfSize(14.0)
         return message
@@ -106,7 +127,6 @@ class MessageCell : BaseCell {
     
     let timeStamp : UILabel = {
         let time = UILabel()
-        time.translatesAutoresizingMaskIntoConstraints = false
         time.text = "5:00 pm"
         time.font = UIFont.systemFontOfSize(14.0)
         time.textAlignment = .Right
@@ -114,7 +134,7 @@ class MessageCell : BaseCell {
     }()
     
     /* called on init, sets layout for group message cell */
-    override private func prepareLayout() {
+    override func prepareLayout() {
         
         self.createContainerView()
         
@@ -152,7 +172,7 @@ class MessageCell : BaseCell {
         containerView.addConstraintsWithFormat("H:|[v0][v1(80)]-12-|", views: self.usernameLbl, self.timeStamp)
         containerView.addConstraintsWithFormat("V:|[v0][v1(24)]|", views: self.usernameLbl, self.messageLbl)
         containerView.addConstraintsWithFormat("H:|[v0]-12-|", views: self.messageLbl)
-        containerView.addConstraintsWithFormat("V:|[v0(20)]", views: self.timeStamp)
+        containerView.addConstraintsWithFormat("V:|[v0(24)]", views: self.timeStamp)
         
     }
 }
@@ -173,6 +193,6 @@ class BaseCell : UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func prepareLayout() {}
+    func prepareLayout() {}
     
 }

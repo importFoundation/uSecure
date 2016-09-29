@@ -14,4 +14,5 @@ struct Message {
     var messageContent : String
     var messageSender: String
     var messageImageURL: String?
+    var isSender: Bool
 }
