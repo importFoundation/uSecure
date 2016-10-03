@@ -18,6 +18,56 @@ extension UIColor {
     }
 }
 
+
+// This extention enables the selected tabBar button to be a different color
+// code from stack over flow.
+extension UIImage {
+    
+    class func imageWithColor(color: UIColor, size: CGSize) -> UIImage {
+        let rect: CGRect = CGRectMake(0, 0, size.width, size.height)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        color.setFill()
+        UIRectFill(rect)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    
+    func makeImageWithColorAndSize(color: UIColor, size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        color.setFill()
+        UIRectFill(CGRectMake(0, 0, size.width, size.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
+    
+    
+    
+    func imageWithColor(tintColor: UIColor) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        
+        let context = UIGraphicsGetCurrentContext()! as CGContextRef
+        CGContextTranslateCTM(context, 0, self.size.height)
+        CGContextScaleCTM(context, 1.0, -1.0);
+        CGContextSetBlendMode(context, CGBlendMode.Normal)
+        
+        let rect = CGRectMake(0, 0, self.size.width, self.size.height) as CGRect
+        CGContextClipToMask(context, rect, self.CGImage!)
+        tintColor.setFill()
+        CGContextFillRect(context, rect)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()! as UIImage
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+}
+
+
+
+
 extension UIView {
     
     func addConstraintsWithFormat(format: String, views : UIView ...) {

@@ -25,6 +25,10 @@ class GroupMessagesController: UICollectionViewController, UICollectionViewDeleg
         self.layoutViews()
 
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -105,7 +109,7 @@ class MessageCell : BaseCell {
     
     let seperatorView : UIView = {
         let seperator = UIView()
-        seperator.backgroundColor = UIColor.lightGrayColor()
+        seperator.backgroundColor = UIColor.florianOrange
         return seperator
     }()
     
@@ -148,9 +152,6 @@ class MessageCell : BaseCell {
         self.addSubview(self.seperatorView)
         self.addConstraintsWithFormat("H:|-82-[v0]|", views: self.seperatorView)
         self.addConstraintsWithFormat("V:[v0(1)]|", views: self.seperatorView)
-        
-        
-        
     }
     
     /* create the container which holds the name, message, and timestamp */

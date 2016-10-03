@@ -43,7 +43,7 @@ class ChatMessageController: UICollectionViewController, UICollectionViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarController?.tabBar.hidden = true
+        //self.tabBarController?.tabBar.hidden = true
         self.collectionView?.alwaysBounceVertical = true
         
         // hardcoded data
@@ -59,10 +59,9 @@ class ChatMessageController: UICollectionViewController, UICollectionViewDelegat
         // add subviews with constraints
         self.view.addSubview(self.containerView)
         self.view.addConstraintsWithFormat("H:|[v0]|", views: containerView)
-        self.view.addConstraintsWithFormat("V:[v0(48)]", views: containerView)
+        self.view.addConstraintsWithFormat("V:[v0(50)]", views: containerView)
         self.bottomContainerConstraint = NSLayoutConstraint(item: containerView, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1, constant: 0)
         self.view.addConstraint(self.bottomContainerConstraint!)
-        
        
         
         setupInterfaceComponents()
@@ -72,12 +71,13 @@ class ChatMessageController: UICollectionViewController, UICollectionViewDelegat
         
     }
     
+
     func handleKeyboard(notification: NSNotification) {
         if let userinfo = notification.userInfo {
             let keyboardFrame = userinfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue()
             let isShowing = notification.name == UIKeyboardWillShowNotification
             print(keyboardFrame!.height)
-            self.bottomContainerConstraint?.constant = isShowing ?  -keyboardFrame!.height : 0
+            self.bottomContainerConstraint?.constant = isShowing ?  -keyboardFrame!.height + (self.tabBarController?.tabBar.frame.size.height)! : 0
             UIView.animateWithDuration(0, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { 
                 self.view.layoutIfNeeded()
                 }, completion: { (completed) in
@@ -217,8 +217,6 @@ class ChatMessageCell : BaseCell {
         self.addConstraintsWithFormat("H:|-8-[v0(30)]", views: profileImageView)
         self.addConstraintsWithFormat("H:|-8-[v0(90)]", views: usernameLbl)
         self.addConstraintsWithFormat("V:[v0(30)]-2-[v1(40)]|", views: profileImageView, usernameLbl)
-//        self.addConstraintsWithFormat("H:[v0(100)]|", views: usernameLbl)
-//        self.addConstraintsWithFormat("V:[v0]|", views: usernameLbl)
     }
 }
 
